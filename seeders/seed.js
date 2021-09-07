@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const db = require('../models');
+var mongoose = require('mongoose');
+var db = require('../models');
 
 mongoose.connect('mongodb://localhost/workout', {
   useNewUrlParser: true,
@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/workout', {
   useUnifiedTopology: true,
 });
 
-const workoutSeed = [
+var workoutSeed = [
   {
     day: new Date(new Date().setDate(new Date().getDate() - 9)),
     exercises: [
